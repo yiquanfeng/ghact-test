@@ -1,0 +1,16 @@
+name: test ui
+on: 
+  workflow_dispatch:
+    inputs:
+      test_words:
+        description: 'Words to test'
+        required: true
+        default: 'hello world'
+jobs:
+  test_ui:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Testing UI with words: ${{ github.event.inputs.test_words }}"
+        env:
+          TEST_WORDS: ${{ github.event.inputs.test_words }}
