@@ -7,8 +7,6 @@ on:
         required: true
         default: 'hello world'
   push:
-    branches:
-      - test
     tags:
       - 'v*.*.*'
 jobs:
