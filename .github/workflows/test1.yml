@@ -6,6 +6,11 @@ on:
         description: 'Words to test'
         required: true
         default: 'hello world'
+  push:
+    branches:
+      - test
+    tags:
+      - 'v*.*.*'
 jobs:
   test_ui:
     runs-on: ubuntu-latest
